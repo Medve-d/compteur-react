@@ -4,14 +4,14 @@ import TodoList from "@/components/to-do";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function compteur() {
+export default function Home() {
   return (
     <>
     <h1>Compteur</h1>
     <div className="compteur">
       <Counter />
     </div>
-    <div>
+    <div className="listeToDo">
       <TodoList />
     </div>
     </>

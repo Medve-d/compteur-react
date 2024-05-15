@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function TodoList() {
-  // Déclare une nouvelle variable d'état, que l'on va appeler "tasks"
+  // Déclare une nouvelle variable d'état, que l'on va appeler "tache"
   const [tache, setTasks] = useState([]);
   // Déclare une nouvelle variable d'état pour le contenu du champ de saisie
   const [inputValue, setInputValue] = useState('');
@@ -11,6 +11,9 @@ function TodoList() {
     if (inputValue.trim() !== '') {
       setTasks([...tache, inputValue]);
       setInputValue(''); // Réinitialiser la valeur du champ de saisie après l'ajout
+      setTimeout(() => {
+        alert("Tâches ajoutés");
+      },800);
     }
   };
 
@@ -19,6 +22,7 @@ function TodoList() {
     const updatedTasks = [...tache];
     updatedTasks.splice(index, 1);
     setTasks(updatedTasks);
+
   };
 
   return (
